@@ -1,0 +1,1 @@
+window.addEventListener("load",(function(){!function(){if(1==new URLSearchParams(location.search).get("auth")){var e=document.querySelector("#login-modal-opener");e&&e.click()}}()}));
