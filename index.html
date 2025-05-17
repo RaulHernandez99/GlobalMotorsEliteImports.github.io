@@ -269,7 +269,9 @@
 							<li class="widget-list-item">
 							  <a class="widget-list-link" href="#" id="abrirPolitica">Política de privacidad</a>
 							</li>
-							<li class="widget-list-item"><a class="widget-list-link" href="https://3xV8zIJWQkHj.com/terms-of-use">Términos de uso</a></li>
+							<li class="widget-list-item">
+							  <a class="widget-list-link" href="#" id="abrirTerminos">Términos de uso</a>
+							</li>
 
 						  </ul>
 						</div>
@@ -473,8 +475,48 @@
 		  });
 		</script>
 
+		<!-- Modal: Términos de Uso -->
+		<div id="modalTerminos" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.7); z-index:1000;">
+		  <div class="modal-content" style="background-color:#fff; margin:10% auto 0 auto; padding:20px; border-radius:8px; max-width:700px; position:relative;">
+			<span class="closeTerminos close" style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer;">&times;</span>
+			<h2>Términos de uso</h2>
+			<p><strong>1. Uso del sitio web</strong><br>
+			El usuario acepta usar este sitio conforme a la ley y sin infringir derechos.</p>
 
+			<p><strong>2. Propiedad intelectual</strong><br>
+			Todos los contenidos son propiedad de nuestra empresa o terceros autorizados.</p>
 
+			<p><strong>3. Responsabilidades</strong><br>
+			No nos hacemos responsables por daños derivados del uso del sitio.</p>
+
+			<p><strong>4. Modificaciones</strong><br>
+			Podemos cambiar estos términos en cualquier momento sin previo aviso.</p>
+
+			<p><strong>5. Legislación aplicable</strong><br>
+			Las leyes de Guatemala regirán estos términos.</p>
+		  </div>
+		</div>
+
+		<script>
+		  const btnTerminos = document.getElementById("abrirTerminos");
+		  const modalTerminos = document.getElementById("modalTerminos");
+		  const closeTerminos = modalTerminos.querySelector(".closeTerminos");
+
+		  btnTerminos.onclick = function(e) {
+			e.preventDefault();
+			modalTerminos.style.display = "block";
+		  }
+
+		  closeTerminos.onclick = function() {
+			modalTerminos.style.display = "none";
+		  }
+
+		  window.addEventListener("click", function(e) {
+			if (e.target == modalTerminos) {
+			  modalTerminos.style.display = "none";
+			}
+		  });
+		</script>
 
 	</body>
 </html>
